@@ -13,6 +13,11 @@ export const Main = styled.main`
 
     padding: 50px 0px;
     margin: auto;
+
+    border: 3px solid gold;
+    border-radius: 10px;
+
+    overflow: hidden;
 `;
 
 export const BackGroundImage = styled.img`
@@ -23,7 +28,7 @@ export const BackGroundImage = styled.img`
     width: 1440px;
     height: 100vh;
 
-    opacity: 0.5;
+    opacity: 0.7;
 `;
 
 export const RoundTitle = styled.h1`
@@ -48,6 +53,8 @@ export const BattleWrapper = styled.section`
 `;
 
 export const BattleButton = styled.button<{ isGameOver?: boolean }>`
+    position: absolute;
+    top: 170px;
     width: 300px;
     height: 50px;
 
