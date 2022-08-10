@@ -9,26 +9,9 @@ export const Main = styled.main`
 
     align-items: center;
     width: 1440px;
-    height: 100vh;
 
     padding: 50px 0px;
     margin: auto;
-
-    border: 3px solid gold;
-    border-radius: 10px;
-
-    overflow: hidden;
-`;
-
-export const BackGroundImage = styled.img`
-    position: absolute;
-    top: 0;
-    z-index: -99;
-
-    width: 1440px;
-    height: 100vh;
-
-    opacity: 0.7;
 `;
 
 export const RoundTitle = styled.h1`

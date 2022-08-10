@@ -1,16 +1,25 @@
 import styled from '@emotion/styled';
 import { HandScissors, HandRock, HandPaper } from 'assets/images';
+import { Dispatch, SetStateAction } from 'react';
 
-const BattleChoice = () => {
+type BattleChoiceProps = {
+    choice: number;
+    setChoice?: Dispatch<SetStateAction<number>>;
+};
+
+const BattleChoice = ({ choice, setChoice }: BattleChoiceProps) => {
+    const onClickChoice = (number: number) => () => {
+        setChoice !== undefined && setChoice(number);
+    };
     return (
         <ChoiceList>
-            <ChoiceItem isChoice={false}>
+            <ChoiceItem isChoice={choice === 1} onClick={onClickChoice(1)}>
                 <img src={HandScissors} alt="가위 손 이미지" />
             </ChoiceItem>
-            <ChoiceItem isChoice={true}>
+            <ChoiceItem isChoice={choice === 2} onClick={onClickChoice(2)}>
                 <img src={HandRock} alt="주먹 손 이미지" />
             </ChoiceItem>
-            <ChoiceItem isChoice={false}>
+            <ChoiceItem isChoice={choice === 3} onClick={onClickChoice(3)}>
                 <img src={HandPaper} alt="보자기 손 이미지" />
             </ChoiceItem>
         </ChoiceList>
