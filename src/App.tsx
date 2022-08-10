@@ -121,10 +121,7 @@ function App() {
     };
 
     const checkLife = () => {
-        if (comChoice !== 0) {
-            userLife > comLife ? alert('당신이 승리하였습니다.') : alert('컴퓨터가 승리하였습니다.');
-            setIsGameOver(true);
-        }
+        setIsGameOver(true);
     };
 
     useEffect(() => {
